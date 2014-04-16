@@ -1,5 +1,3 @@
-[ ![Codeship Status for arpinum/alexandria-api](https://www.codeship.io/projects/cd050090-a5fc-0131-9df9-4e0ca91b4314/status?branch=master)](https://www.codeship.io/projects/18793)
-
 # Alexandria
 
 ## Installation sur Eclipse 
