@@ -8,6 +8,9 @@ repositories {
 }
 
 compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+compileGroovy.options.encoding = 'UTF-8'
+compileTestGroovy.options.encoding = 'UTF-8'
 
 project.ext.with {
     set "restletVersion", "2.2.0"
@@ -58,7 +61,6 @@ dependencies {
     testCompile "org.mongolink:mongolink-testtools:$mongoLinkVersion"
     testCompile 'com.github.fakemongo:fongo:1.4.1'
     testCompile 'com.gmongo:gmongo:1.3'
-
 }
 
 
