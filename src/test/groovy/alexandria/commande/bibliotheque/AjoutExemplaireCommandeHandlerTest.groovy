@@ -1,12 +1,17 @@
 package alexandria.commande.bibliotheque
+import org.junit.Rule
+
+import spock.lang.Specification
 import alexandria.infrastructure.persistance.memoire.AvecEntrepotsMemoire
 import alexandria.modele.LocalisateurEntrepots
 import alexandria.modele.bibliotheque.Exemplaire
-import org.junit.Rule
-import spock.lang.Specification
+import fr.arpinum.graine.modele.evenement.AvecBusEvenement
 
 class AjoutExemplaireCommandeHandlerTest extends Specification {
 
+	@Rule
+	AvecBusEvenement avecBusMemoire = new AvecBusEvenement()
+	
     @Rule
     AvecEntrepotsMemoire entrepotsMemoire = new AvecEntrepotsMemoire()
 

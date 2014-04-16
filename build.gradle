@@ -24,6 +24,7 @@ test {
 }
 
 dependencies {
+	compile 'org.codehaus.groovy:groovy-all:2.2.2'
     compile 'com.google.guava:guava:16.0.1'
     compile "com.google.inject.extensions:guice-multibindings:$guiceVersion"
     compile "com.google.inject:guice:$guiceVersion"

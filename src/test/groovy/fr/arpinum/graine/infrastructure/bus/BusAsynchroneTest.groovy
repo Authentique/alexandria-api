@@ -1,15 +1,17 @@
 package fr.arpinum.graine.infrastructure.bus
 
+import static org.mockito.Mockito.*
+
+import java.util.concurrent.ExecutorService
+
+import spock.lang.Specification
+
 import com.google.common.collect.Sets
+import com.google.common.reflect.TypeToken
 import com.google.common.util.concurrent.Futures
 import com.google.common.util.concurrent.ListenableFuture
 import com.google.common.util.concurrent.ListeningExecutorService
 import com.google.common.util.concurrent.MoreExecutors
-import spock.lang.Specification
-
-import java.util.concurrent.ExecutorService
-
-import static org.mockito.Mockito.*
 
 public class BusAsynchroneTest extends Specification {
 
@@ -184,6 +186,12 @@ public class BusAsynchroneTest extends Specification {
             }
             return "42";
         }
+		
+		@Override
+		public Class<FauxMessage> typeCommande() {
+			return (Class<FauxMessage>) new TypeToken<FauxMessage>(getClass()) {
+			}.getRawType();
+		}
 
         public void renvoieException() {
             this.exception = true;
