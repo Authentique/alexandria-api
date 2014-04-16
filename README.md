@@ -16,4 +16,8 @@ Tout comme avec maven, il peut être intéressant de lancer gradle en ligne de c
 
 * Configurer le JAVA_HOME pour qu'il pointe vers le jdk8
 * Ajouter répertoire bin du jdk8 au path
-* exécuter `gradle build`
+* Exécuter `gradle build`
+
+## Lancer le serveur de l'api
+
+* Exécuter le Main.java
